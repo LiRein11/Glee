@@ -1,50 +1,56 @@
- $accent: #fe3e57 ;
- $default: #8d8d8d ;
- $title: #29282d ;
- $bg: #f6f6f6 ;
+ $accent: #a3bbc8 ;
+ $default: #243f4d ;
+ $title: #1a1a1a ;
+ $bg: #fcd7b6 ;
+ $text: #7b7b7b;
 
-%quicksand-400{
-  font-family: 'Quicksand-Regular', sans-serif;
+%dmsans-400{
+  font-family: 'DMSans-Regular', sans-serif;
   font-weight: 400;
 }
 
-%quicksand-500{
-  font-family: 'Quicksand-Medium', sans-serif;
+%dmsans-500{
+  font-family: 'DMSans-Medium', sans-serif;
   font-weight: 500;
 }
 
-%roboto-400{
-  font-family: 'Roboto-Regular', sans-serif;
+%dmsans-700{
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
 }
 
-%roboto-700{
-  font-family: 'Roboto-Bold', sans-serif;
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+%poppins-700{
+  font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
 
 %btn{
-  padding: 12px 26px;
-  text-transform: uppercase;
-  color: #fff;
+  border: none;
   background-color: $accent;
-  @extend %roboto-400;
-  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-  cursor: pointer;
+  color: #fff;
+  width: 100px;
+  height: 38px;
+  @extend %dmsans-400;
+  font-size: 14px;
+  line-height: 21px;
 }
-
-%checkbox-hidden,
-%radio-hidden{
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  position: absolute;
-}
-
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-} 
