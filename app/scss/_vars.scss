@@ -2,6 +2,7 @@
  $default: #243f4d ;
  $title: #1a1a1a ;
  $bg: #fcd7b6 ;
+ $text: #7b7b7b;
 
 %dmsans-400{
   font-family: 'DMSans-Regular', sans-serif;
@@ -43,3 +44,13 @@
   font-weight: 700;
 }
 
+%btn{
+  border: none;
+  background-color: $accent;
+  color: #fff;
+  width: 100px;
+  height: 38px;
+  @extend %dmsans-400;
+  font-size: 14px;
+  line-height: 21px;
+}
