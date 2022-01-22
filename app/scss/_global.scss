@@ -28,9 +28,79 @@ main{
   padding: 0 15px;
 }
 
+.top-container{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 30px 0 30px;
+  background-color: #edf1f4;
+  text-align: center;
+}
+
+.title{
+  font-size: 36px;
+  line-height: 24px;
+  @extend %rubik-300;
+  color: #222933;
+  margin-bottom: 11px;
+}
+
 a{
   color: $text;
   font-size: 14px;
-  line-height: 32px;
   @extend %rubik-400;
+}
+
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    position: relative;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7b7b7b;
+    @extend %rubik-400;
+    &::after{
+      content: "/";
+      position: absolute;
+      height: 13px;
+      width: 2px;
+      right: 12px;
+      top: 0px;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+.partners-section{
+  width: 1920px;
+  height: 250px;
+  background-color: #fef7f0;
+  display: flex;
+  justify-content: center;
+  .container{
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__images{
+  display: inline-flex;
+  }
+  &__images-img{
+    & + .partners-section__images-img{
+      padding-left: 98px;
+    }
+    object-fit: contain;
+  }
 }
