@@ -718,7 +718,7 @@
 }
 
 .catalog{
-  padding: 115px 0 105px;
+  padding: 115px 0;
   &__inner{
     display: flex;
   }
@@ -727,6 +727,7 @@
     margin-right: 30px;
   }
 }
+
 .filter__title{
   @extend %dmsans-700;
   color: #243f4d;
@@ -855,6 +856,7 @@
     @extend %rubik-400;
     line-height: 1;
     padding-top: 5px;
+    display: block;
   }
   &__price{
     font-size: 15px;
@@ -870,6 +872,113 @@
     }
   }
 }
+
+.catalog-content{
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 105px;
+  }
+  &__items-line{
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  &__item{
+    height: 500px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__item-imglink{
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f2f2f2;
+  }
+  &__item-box{
+    max-width: 420px;
+    padding-top: 90px;
+    padding-left: 55px;
+  }
+  &__item-titlelink{
+    font-size: 40px;
+    color: #333333;
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__item-price{
+    font-size: 30px;
+    color: #333333;
+    line-height: 45px;
+    display: block;
+    padding: 25px 0;
+  }
+  &__item-text{
+    color: #243f4d;
+    width: 415px;
+    margin-bottom: 30px;
+  }
+  .star-line{
+    display: block;
+    padding: 0;
+    width: 140px !important;
+    svg + svg{
+      padding-left: 13px;
+    }
+  }
+
+  &__item-buttons{
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border: none;
+    padding: 0;
+    margin-right: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    svg{
+      fill: $accent;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+  }
+  &__item-buttons:hover{
+    background-color: $accent;
+    svg{
+      fill: rgb(100%, 100%, 100%);
+    }
+  }
+  &__item-button{
+    cursor: pointer;
+    height: 50px;
+    width: 208px;
+    background-color: $accent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 595px;
+    display: none;
+  }
+  .pagination-line{
+    justify-content: start;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 @import 'media';

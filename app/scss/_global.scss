@@ -104,3 +104,40 @@ a{
     object-fit: contain;
   }
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: #243f4d;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    padding-right: 15px;
+    margin: auto ;
+    line-height: 1;
+  }
+  &__link{
+    padding: 18px 20px;
+    border: 1px solid $accent;
+    display: block;
+    font-size: 16px;
+    color: #243f4d;
+  }
+  &__link--active{
+    background-color: $accent;
+    color: #fff;
+  }
+  &__arrow{
+    border: 1px solid $accent;
+    padding: 18px 20px;
+    line-height: 1;
+    padding-right: 15px;
+    font-size: 16px;
+    color: #243f4d;
+  }
+  &__prev{
+    margin-right: 15px;
+  }
+}
