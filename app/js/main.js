@@ -1,5 +1,32 @@
 $(function(){
 
+  $('.product-tabs__top-item').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active'); 
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+
+  });
+
+  $('.product-item__num').styler();
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
   $('.catalog-content__item-buttons--cartone').on('click', function () {
     $('.catalog-content__item-button--one').css("display", "inline-block");
   });
