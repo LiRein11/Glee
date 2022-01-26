@@ -1250,6 +1250,184 @@
   }
 }
 
+.blog-page{
+  margin: 120px 0;
+  &__inner{
+    display: flex;
+  }
+  &__content{
+    width: 830px;
+    margin-right: 70px;
+  }
+  &__filters{
+    max-width: 275px;
+  }
+}
+
+.blog-item{
+  &__box{
+    position: relative;
+    margin-bottom: 35px;
+  }
+  &__info{
+    width: 275px;
+    height: 70px;
+    background-color: $accent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+  }
+  &__date{
+    margin: 0 25px 0 40px;
+    font-size: 12px;
+    position: relative;
+  }
+  &__date::before{
+    content: "";
+    background-image: url('../images/icons/calendar.svg');
+    width: 12px;
+    height: 13px;
+    top: 8px;
+    left: -20px;
+    position: absolute;
+  }
+  &__author{
+    color: #fff;
+    font-size: 12px;
+    padding-left: 18px;
+    position: relative;
+    z-index: 1;
+  }
+  &__author::before{
+    content: "";
+    background-image: url('../images/icons/user.svg');
+    width: 12px;
+    height: 13px;
+    top: 8px;
+    left: 0;
+    position: absolute;
+  }
+  &__title{
+    line-height: 1;
+    margin-bottom: 35px;
+    color: #333333;
+    font-size: 36px;
+    display: block;
+  }
+  &__text{
+    margin-bottom: 30px;
+  }
+  &__btn-box{
+    margin-bottom: 50px;
+    width: 180px;
+    height: 60px;
+    border: 1px solid $accent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg{
+      path{
+        fill: $accent;
+      }
+    }
+  }
+  &__link{
+    font-size: 15px;
+    color: $accent;
+    @extend %dmsans-500;
+  }
+}
+
+.filter-search{
+  margin-bottom: 55px;
+  &__form{
+    display: flex;
+    position: relative;
+  }
+  &__input{
+    height: 43px;
+    width: 222px;
+    border: 1px solid #edf1f4;
+    border-radius: 4px;
+    padding: 0 5px 0 10px;
+    outline: none;
+  }
+  &__btn{
+    width: 48px;
+    height: 43px;
+    border: none;
+    background-color: #edf1f4;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+  }
+}
+
+.filter-category{
+  margin-bottom: 45px;
+}
+
+.filter-posts{
+  &__content{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__img{
+    margin-right: 20px;
+    img{
+      max-width: none;
+    }
+  }
+  &__title{
+    width: 163px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    display: block;
+    margin-bottom: 12px;
+  }
+  &__date{
+    font-size: 12px;
+    color: #9a9a9a;
+    line-height: 1;
+    padding-left: 19px;
+    position: relative;
+  }
+  &__date::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/calendar-color.svg');
+    width: 12px;
+    height: 13px;
+    top: -1px;
+    left: 0;
+    path{
+      fill: red;
+    }
+  }
+}
+
+.pagination-blog{
+  justify-content: start;
+  padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
