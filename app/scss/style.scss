@@ -1419,7 +1419,146 @@
   padding-top: 25px;
 }
 
-
+.contact{
+  margin: 115px 0 130px;
+  &__thumbtitle{
+    text-align: center;
+    color: $accent;
+    @extend %poppins-700;
+    line-height: 1;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  &__title{
+    text-align: center;
+    @extend %dmsans-700;
+    font-size: 35px;
+    line-height: 1;
+    color: #436372;
+    margin-bottom: 72px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 120px;
+  }
+  &__item{
+    width: 370px;
+    height: 385px;
+    padding: 70px 0 75px;
+    background-color: #fbfbfb;
+  }
+  &__item--active{
+    border: 2px solid $accent;
+    background-color: #fbfbfb;
+  }
+  &__img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+    margin-bottom: 60px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+  &__img--active{
+    background-color: $accent;
+    svg{
+      path{
+        fill:#fff;
+      }
+    }
+  }
+  &__item-title{
+    @extend %dmsans-700;
+    color: #222222;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  &__info{
+    text-align: center;
+    color: #565872;
+  }
+  &__form{
+    margin-right: 50px;
+    width: 615px;
+  }
+  &__form-box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form-input{
+    width: 300px;
+    height: 50px;
+    border: none;
+    padding: 15px 25px 15px 20px;
+    background-color: #fafafa;
+    outline: none;
+    margin-bottom: 25px;
+    &::placeholder{
+      color: #565872;
+    }
+  }
+  &__form-input--name{
+    background-image: url('../images/icons/user-contact.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  &__form-input--email{
+    background-image: url('../images/icons/email-contact.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  &__form-input--name:focus,
+  &__form-input--email:focus{
+    background-image: none;
+    &::placeholder{
+      color: transparent;
+    }
+  }
+  &__form-textarea{
+    width: 100%;
+    height: 170px;
+    border: none;
+    padding: 0 25px 15px 20px;
+    background-color: #fafafa;
+    margin-bottom: 25px;
+    outline: none;
+    resize: none;
+    &::placeholder{
+      color: #565872;
+      line-height: 1;
+    }
+  }
+  &__form-textarea--message{
+    background-image: url('../images/icons/message.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  &__form-textarea--message:focus{
+    background-image: none;
+    &::placeholder{
+      color: transparent;
+    }
+  }
+  &__form-btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    @extend %dmsans-700;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  &__box{
+    display: flex;
+  }
+}
 
 
 
