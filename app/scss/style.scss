@@ -1223,6 +1223,32 @@
   }
 }
 
+.terms{
+  margin: 115px 0 115px;
+  &__list{
+    margin: 25px 0 70px;
+  }
+  ol{
+    list-style-type: decimal-leading-zero;
+    margin-left: 35px;
+  }
+  &__list-text{
+    margin-bottom: 25px;
+    width: 1165px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__text{
+    margin: 25px 0 65px;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 1;
+    color: $default;
+  }
+}
 
 
 
