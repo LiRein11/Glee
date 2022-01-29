@@ -1508,12 +1508,12 @@
   &__form-input--name{
     background-image: url('../images/icons/user-contact.svg');
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: 95% 50%;
   }
   &__form-input--email{
     background-image: url('../images/icons/email-contact.svg');
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: 95% 50%;
   }
   &__form-input--name:focus,
   &__form-input--email:focus{
@@ -1526,7 +1526,7 @@
     width: 100%;
     height: 170px;
     border: none;
-    padding: 0 25px 15px 20px;
+    padding: 20px 25px 15px 20px;
     background-color: #fafafa;
     margin-bottom: 25px;
     outline: none;
@@ -1539,7 +1539,7 @@
   &__form-textarea--message{
     background-image: url('../images/icons/message.svg');
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: 97.5% 14%;
   }
   &__form-textarea--message:focus{
     background-image: none;
@@ -1755,9 +1755,254 @@
   }
 }
 
-  
+.blog-item{
+  &__title-detalis{
+    margin-bottom: 20px;
+  }
+  &__text-detalis{
+    @extend %rubik-500;
+    margin-bottom: 20px;
+  }
+  &__text-one{
+    margin-bottom: 35px;
+  }
+  &__blockquote{
+    background-color: #edf1f4;
+    padding: 20px 90px 20px 35px;
+    border-left: 6px solid $accent;
+    margin-bottom: 45px;
+  }
+  &__blockquote-author{
+    padding-left: 45px;
+    position: relative;
+  }
+  &__blockquote-author::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/stick.svg');
+    width: 20px;
+    height: 3px;
+    top: 9px;
+    left: 3px;
+  }
+  &__content{
+    display: flex;
+  }
+  &__content-img{
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+  &__content-title{
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 1;
+    color: $default;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  &__content-text{
+    color: #565872;
+  }
+  &__titletitle{
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 1;
+    color: $default;
+    margin-bottom: 25px;
+  }
+  &__texttext{
+    color: #565872;
+    padding-bottom: 65px;
+    border-bottom: 2px solid #ebebeb;
+    margin-bottom: 25px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #ebebeb;
+    margin-bottom: 65px;
+  }
+  &__left-content{
+    display: flex;
+    align-items: center;
+  }
+  &__left-img{
+    margin-right: 25px;
+  }
+  &__left-title{
+    @extend %rubik-500;
+    font-size: 18px;
+    color: #333333;
+  }
+  &__left-text{
+    color: #666666;
+  }
+  &__right{
+    width: 190px;
+    margin-right: 20px;
+  }
+  &__right-span{
+    display: inline-block;
+    color: #333333;
+  }
+  &__right-text{
+    display: inline-block;
+    margin-left: 30px;
+    color: #a1a1a1;
+  }
+  &__right-link{
+    padding-left: 20px;
+    transform: translateY(4px);
+  }
+  &__right-links{
+    display: inline-flex;
+  }
+}
 
-
+.comments{
+  margin-bottom: 90px;
+  &__title{
+    margin-bottom: 60px;
+    font-size: 24px;
+    @extend %rubik-700;
+    color: #436372;
+  }
+  &__comment{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__comment--active{
+    margin-left: 130px;
+  }
+  &__img{
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__info-title{
+    @extend %rubik-700;
+    color: #436372;
+    font-size: 16px;
+    line-height: 1;
+  }
+  &__info-date{
+    font-size: 14px;
+    color: #9e9e9e;
+    line-height: 1;
+  }
+  &__text{
+    color: #565872;
+    margin-bottom: 20px;  
+  }
+  &__reply{
+    font-size: 14px;
+    color: #516278;
+    line-height: 1;
+    margin-bottom: 60px;
+    display: inline-block;
+    position: relative;
+  }
+  &__reply::after{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/arrow-solid.svg');
+    width: 14px;
+    height: 13px;
+    top: 0;
+    left: 41px;
+  }
+  &__comment::after{
+    content: "";
+    position: absolute;
+    background-color: #e0e0e0;
+    width: 700px;
+    height: 1px;
+    bottom: 30px;
+    left: 130px;
+  }
+  &__comment--active::after{
+    content: "";
+    position: absolute;
+    background-color: #e0e0e0;
+    width: 700px;
+    height: 1px;
+    bottom: 30px;
+    left: 0;
+  }
+  &__form-box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form-input{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    padding: 15px 25px 15px 20px;
+    outline-color: $accent;
+    margin-bottom: 20px;
+    &::placeholder{
+      color: #999999;
+    }
+  }
+  &__form-input--name{
+    background-image: url('../images/icons/user-contact-accent.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
+  &__form-input--email{
+    background-image: url('../images/icons/email-contact-accent.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
+  &__form-input--name:focus,
+  &__form-input--email:focus{
+    &::placeholder{
+      color: transparent;
+    }
+  }
+  &__form-textarea{
+    width: 100%;
+    height: 120px;
+    border: 1px solid #e5e5e5;
+    padding: 15px 20px 15px 20px;
+    margin-bottom: 40px;
+    outline-color: $accent;
+    resize: none;
+    &::placeholder{
+      color: #999999;
+      line-height: 1;
+    }
+  }
+  &__form-textarea--message{
+    background-image: url('../images/icons/message-accent.svg');
+    background-repeat: no-repeat;
+    background-position: 97.6% 14%;
+  }
+  &__form-textarea--message:focus{
+    &::placeholder{
+      color: transparent;
+    }
+  }
+  &__form-btn{
+    width: 190px;
+    text-transform: uppercase;
+    height: 50px;
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+  }
+}
 
 
 
