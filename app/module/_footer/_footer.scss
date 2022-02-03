@@ -3,7 +3,7 @@
   border-bottom: 1px solid #dae4e9;
   display: flex;
   &__contact{
-    width: 200px;
+    width: 255px;
     margin-right: 100px;
   }
   &__nav{
@@ -72,6 +72,7 @@
   display: flex;
   justify-content: space-between;
   padding: 35px 0 38px;
+  flex-wrap: wrap;
   &__link--active{
     position: relative;
   }
@@ -91,5 +92,45 @@
     color: $text;
     font-size: 14px;
     line-height: 32px;
+  }
+}
+
+@media (max-width: 1100px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      margin-top: 15px;
+      max-width: 100%;
+    }
+    &__contact{
+      margin-right: 60px;
+    }
+    &__nav{
+      margin-right: 40px;
+    }
+    &__text{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 770px){
+  .footer-top{
+    &__contact{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 630px){
+  .footer-bottom{
+    justify-content: center;
+    padding: 17px 0 19px;
+    &__copy{
+      width: 100%;
+      text-align: center;
+    }
   }
 }
