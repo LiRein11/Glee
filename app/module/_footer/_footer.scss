@@ -95,6 +95,12 @@
   }
 }
 
+@media (max-width: 1220px){
+  .footer-top{
+    padding: 140px 0 38px;
+  }
+}
+
 @media (max-width: 1100px){
   .footer-top{
     flex-wrap: wrap;
@@ -124,6 +130,12 @@
   }
 }
 
+@media (max-width: 685px){
+  .footer-top{
+    padding: 50px 0 38px;
+  }
+}
+
 @media (max-width: 630px){
   .footer-bottom{
     justify-content: center;
@@ -132,5 +144,11 @@
       width: 100%;
       text-align: center;
     }
+  }
+}
+
+@media (max-width: 440px){
+  .footer-top{
+    padding: 0 0 38px;
   }
 }
