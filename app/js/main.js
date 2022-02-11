@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.catalog__filter-btn').on('click', function () {
+    $('.catalog__filters').slideToggle();
+  });
+
   $('.menu__btn').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active')
   });
@@ -29,6 +33,14 @@ $(function(){
     draggable: false,
     arrows: false,
     fade: true,
+    responsive: [
+      {
+        breakpoint: 901,
+        settings: {
+          draggable: true,
+        }
+      },
+    ]
   });
 
   $('.catalog-content__item-buttons--cartone').on('click', function () {

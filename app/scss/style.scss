@@ -14,6 +14,9 @@
     width: 280px;
     margin-right: 30px;
   }
+  &__filter-btn{
+    display: none;
+  }
 }
 
 .filter__title{
@@ -252,7 +255,6 @@
     padding: 0;
     border-radius: 5px;
     position: absolute;
-    right: 595px;
     display: none;
   }
   .pagination-line{
@@ -456,11 +458,13 @@
     align-items: center;
     background-color: #edf1f4;
     font-size: 18px;
+    line-height: 1;
     color: $default;
     @extend %rubik-500;
     width: 240px;
     height: 53px;
     border-radius: 5px;
+    text-align: center;
     & + .product-tabs__top-item{
       margin-left: 13px;
     }
@@ -522,7 +526,7 @@
   }
   &__list-text{
     margin-bottom: 25px;
-    width: 1165px;
+    width: 100%;
     &:last-child{
       margin-bottom: 0;
     }
@@ -655,7 +659,7 @@
     align-items: center;
     padding: 0;
     position: absolute;
-    right: 3%;
+    right: 0;
     cursor: pointer;
   }
 }
@@ -731,6 +735,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 120px;
+    flex-wrap: wrap;
   }
   &__item{
     width: 370px;
@@ -848,6 +853,11 @@
   &__box{
     display: flex;
   }
+}
+
+#map{
+  width: 500px;
+  height: 335px;
 }
 
 .about-top{
@@ -1075,10 +1085,10 @@
   }
   &__content{
     display: flex;
+    margin-bottom: 40px;
   }
   &__content-img{
     margin-right: 30px;
-    margin-bottom: 40px;
   }
   &__content-title{
     @extend %rubik-500;
