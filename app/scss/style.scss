@@ -506,12 +506,16 @@
     border-radius: 4px;
     background-color: #fff;
   }
-  &__buttons--one{
+  &__buttons--active{
     border-color: #edf1f4;
   }
   &__items{
     display: flex;
     justify-content: space-between;
+    display: none;
+    &.related__items--active{
+      display: flex;
+    }
   }
 }
 

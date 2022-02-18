@@ -8,6 +8,15 @@ $(function(){
     $('.menu__list').toggleClass('menu__list--active')
   });
 
+  $('.related__buttons').on('click', function (e) {
+    e.preventDefault();
+    $('.related__buttons').removeClass('related__buttons--active');
+    $(this).addClass('related__buttons--active');
+
+    $('.related__items').removeClass('related__items--active');
+    $($(this).attr('href')).addClass('related__items--active');
+  });
+
   $('.product-tabs__top-item').on('click', function(e){
     e.preventDefault();
     $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
@@ -15,7 +24,6 @@ $(function(){
 
     $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
     $($(this).attr('href')).addClass('product-tabs__content-item--active');
-
   });
 
   $('.product-item__num').styler();
